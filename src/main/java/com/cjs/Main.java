@@ -1,7 +1,7 @@
-package com.cjs1230;
+package com.cjs;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-    }//test
+    }
 }
