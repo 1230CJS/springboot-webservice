@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    include: oauth, real-db
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
