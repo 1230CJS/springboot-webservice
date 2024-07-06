@@ -38,7 +38,7 @@ dependencies {
 
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
 
-    compileOnly("org.mariadb.jdbc:mariadb-java-client")
+    implementation("org.mariadb.jdbc:mariadb-java-client")
 
     //gradle 5.0 미만
     //implementation('org.projectlombok:lombok')
