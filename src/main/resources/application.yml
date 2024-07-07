@@ -5,5 +5,6 @@ spring:
     properties:
       hibernate:
         show_sql: true
+        dialect: MySQL5InnoDBDialect
   session:
     store-type: jdbc
