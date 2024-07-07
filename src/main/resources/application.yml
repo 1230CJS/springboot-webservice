@@ -11,4 +11,4 @@ spring:
 server:
   servlet:
     encoding:
-      force: true
+      force-response: true
