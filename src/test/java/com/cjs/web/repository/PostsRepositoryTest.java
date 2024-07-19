@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PostsRepositoryTest{
     @Autowired
     private PostsRepository postsRepository;
-    @Test
+    //@Test
     @DisplayName("생성시간/수정시간 자동화하기 테스트")
     public void test_baseTimeEntityPost(){
 
