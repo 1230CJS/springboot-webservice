@@ -49,8 +49,8 @@ jobs:
       run: cp ./build/libs/*.jar ./deploy/
 
       #오타
-    - name: Copy appsepc.yml
-      run: cp ./appsepc.yml ./deploy/
+    - name: Copy appspec.yml
+      run: cp ./appspec.yml ./deploy/
 
     - name: Copy deploy.sh
       run: cp -R ./script/deploy.sh ./deploy/
@@ -70,7 +70,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
-      run:  aws s3 cp ./springboot-webservice-build.zip s3://springboot-webservice-build --region ap-northeast-2 --acl private
+      run:  aws s3 cp ./springboot-webservice-build.zip s3://s3-springboot-webservice-build --region ap-northeast-2 --acl private
 
       # Deploy - AWS CodeDeploy, application
     - name: Deploy
@@ -82,7 +82,7 @@ jobs:
         --application-name springboot-webservice-app 
         --deployment-group-name springboot-webservice-group 
         --file-exists-behavior OVERWRITE 
-        --s3-location bucket=springboot-webservice-build,bundleType=zip,key=springboot-webservice-build.zip 
+        --s3-location bucket=s3-springboot-webservice-build,bundleType=zip,key=springboot-webservice-build.zip 
         --region ap-northeast-2  
 
 
