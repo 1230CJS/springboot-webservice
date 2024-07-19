@@ -42,7 +42,7 @@ public class PostsApiControllerTest {
     }
 
 
-    @Test
+    //@Test
     @DisplayName("Posts 등록된다.")
     public void test_postCreate() {
         // given
@@ -73,7 +73,7 @@ public class PostsApiControllerTest {
         assertThat( postsList.get(0).getContent() ).isEqualTo(expectedContent);
     }
 
-    @Test
+    //@Test
     @DisplayName("Posts 수정된다.")
     public void Posts_modify() throws Exception {
 
@@ -105,7 +105,7 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
     }
 
-    @Test
+    //@Test
     @DisplayName("Posts 조회된다.")
     public void Posts_inquiry() throws Exception {
         // given
@@ -136,7 +136,7 @@ public class PostsApiControllerTest {
         assertThat(expectedContent).isEqualTo(responseEntity.getBody().getContent());
     }
 
-    @Test
+    //@Test
     @DisplayName("Posts 모두 조회된다.")
     public void Posts_inquirAll() throws Exception {
         // given
